@@ -1,0 +1,270 @@
+jr $00	;12
+jr $fe	;12
+jr $FE	;12
+jr $FE	;12
+halt	;4
+nop	;4
+di	;4
+ld a,[$ff00+$44]	;12
+cp $93	;8
+jr nz,$FA	;12/8
+ld a,$51	;8
+ld [$ff00+$40],a	;12
+ld de,$0150	;12
+ld hl,$8000	;12
+ld c,$10	;8
+ld a,[de]	;8
+ldi [hl],a	;8
+inc de	;8
+dec c	;4
+jr nz,$FA	;12/8
+ld a,[$ff00+$40]	;12
+set 7,a	;8
+ld [$ff00+$40],a	;12
+ld a,$e4	;8
+ld [$ff00+$47],a	;12
+halt	;4
+nop	;4
+jr $FC	;12
+di	;4
+ld a,[$ff00+$44]	;12
+cp $93	;8
+jr nz,$FA	;12/8
+ld a,$51	;8
+ld [$ff00+$40],a	;12
+ld de,$0150	;12
+ld hl,$8000	;12
+ld c,$10	;8
+ld a,[de]	;8
+ldi [hl],a	;8
+inc de	;8
+dec c	;4
+jr nz,$FA	;12/8
+ld hl,$9800	;12
+xor a	;4
+ldi [hl],a	;8
+ld a,h	;4
+cp $9b	;8
+jr nz,$F9	;12/8
+ld a,l	;4
+cp $ff	;8
+jr nz,$F4	;12/8
+ld a,[$ff00+$40]	;12
+set 7,a	;8
+ld [$ff00+$40],a	;12
+ld a,$e4	;8
+ld [$ff00+$47],a	;12
+halt	;4
+nop	;4
+jr $FC	;12
+reti	;16
+di	;4
+ld a,[$ff00+$44]	;12
+cp $93	;8
+jr nz,$FA	;12/8
+ld a,$51	;8
+ld [$ff00+$40],a	;12
+ld de,$0150	;12
+ld hl,$8000	;12
+ld c,$10	;8
+ld a,[de]	;8
+ldi [hl],a	;8
+inc de	;8
+dec c	;4
+jr nz,$FA	;12/8
+ld hl,$9800	;12
+xor a	;4
+ldi [hl],a	;8
+ld a,h	;4
+cp $9b	;8
+jr nz,$F9	;12/8
+ld a,l	;4
+cp $ff	;8
+jr nz,$F4	;12/8
+ld a,[$ff00+$40]	;12
+set 7,a	;8
+ld [$ff00+$40],a	;12
+ld a,$e4	;8
+ld [$ff00+$47],a	;12
+halt	;4
+nop	;4
+jr $FC	;12
+reti	;16
+di	;4
+ld a,[$ff00+$44]	;12
+cp $93	;8
+jr nz,$FA	;12/8
+ld a,$51	;8
+ld [$ff00+$40],a	;12
+ld de,$0150	;12
+ld hl,$8000	;12
+ld c,$10	;8
+ld a,[de]	;8
+ldi [hl],a	;8
+inc de	;8
+dec c	;4
+jr nz,$FA	;12/8
+ld hl,$9800	;12
+xor a	;4
+ldi [hl],a	;8
+ld a,h	;4
+cp $9b	;8
+jr nz,$F9	;12/8
+ld a,l	;4
+cp $ff	;8
+jr nz,$F4	;12/8
+ld a,[$ff00+$40]	;12
+set 7,a	;8
+ld [$ff00+$40],a	;12
+ld a,$e4	;8
+ld [$ff00+$47],a	;12
+ld a,[$ff00+$ff]	;12
+set 0,a	;8
+ld [$ff00+$ff],a	;12
+halt	;4
+nop	;4
+jr $FC	;12
+reti	;16
+di	;4
+ld a,[$ff00+$44]	;12
+cp $93	;8
+jr nz,$FA	;12/8
+ld a,$51	;8
+ld [$ff00+$40],a	;12
+ld de,$0150	;12
+ld hl,$8000	;12
+ld c,$10	;8
+ld a,[de]	;8
+ldi [hl],a	;8
+inc de	;8
+dec c	;4
+jr nz,$FA	;12/8
+ld hl,$9800	;12
+xor a	;4
+ldi [hl],a	;8
+ld a,h	;4
+cp $9b	;8
+jr nz,$F9	;12/8
+ld a,l	;4
+cp $ff	;8
+jr nz,$F4	;12/8
+ld a,[$ff00+$40]	;12
+set 7,a	;8
+ld [$ff00+$40],a	;12
+ld a,$e4	;8
+ld [$ff00+$47],a	;12
+ld a,[$ff00+$ff]	;12
+set 0,a	;8
+ld [$ff00+$ff],a	;12
+ei	;4
+halt	;4
+nop	;4
+jr $FC	;12
+reti	;16
+di	;4
+ld a,[$ff00+$44]	;12
+cp $93	;8
+jr nz,$FA	;12/8
+ld a,$51	;8
+ld [$ff00+$40],a	;12
+ld de,$0150	;12
+ld hl,$8000	;12
+ld c,$10	;8
+ld a,[de]	;8
+ldi [hl],a	;8
+inc de	;8
+dec c	;4
+jr nz,$FA	;12/8
+ld hl,$9800	;12
+xor a	;4
+ldi [hl],a	;8
+ld a,h	;4
+cp $9b	;8
+jr nz,$F9	;12/8
+ld a,l	;4
+cp $ff	;8
+jr nz,$F4	;12/8
+ld a,[$ff00+$40]	;12
+set 7,a	;8
+ld [$ff00+$40],a	;12
+ld a,$e4	;8
+ld [$ff00+$47],a	;12
+ld a,[$ff00+$ff]	;12
+set 0,a	;8
+ld [$ff00+$ff],a	;12
+ei	;4
+halt	;4
+nop	;4
+ld a,[$ff00+$00]	;12
+set 5,a	;8
+res 4,a	;8
+ld [$ff00+$00],a	;12
+ld a,[$ff00+$00]	;12
+ld a,[$ff00+$00]	;12
+cpl	;4
+ld b,a	;4
+jr $EE	;12
+reti	;16
+di	;4
+ld a,[$ff00+$44]	;12
+cp $93	;8
+jr nz,$FA	;12/8
+ld a,$51	;8
+ld [$ff00+$40],a	;12
+ld de,$0150	;12
+ld hl,$8000	;12
+ld c,$10	;8
+ld a,[de]	;8
+ldi [hl],a	;8
+inc de	;8
+dec c	;4
+jr nz,$FA	;12/8
+ld hl,$9800	;12
+xor a	;4
+ldi [hl],a	;8
+ld a,h	;4
+cp $9b	;8
+jr nz,$F9	;12/8
+ld a,l	;4
+cp $ff	;8
+jr nz,$F4	;12/8
+ld a,[$ff00+$40]	;12
+set 7,a	;8
+ld [$ff00+$40],a	;12
+ld a,$e4	;8
+ld [$ff00+$47],a	;12
+ld a,[$ff00+$ff]	;12
+set 0,a	;8
+ld [$ff00+$ff],a	;12
+ei	;4
+halt	;4
+nop	;4
+ld a,[$ff00+$00]	;12
+set 5,a	;8
+res 4,a	;8
+ld [$ff00+$00],a	;12
+ld a,[$ff00+$00]	;12
+ld a,[$ff00+$00]	;12
+cpl	;4
+ld b,a	;4
+bit 3,b	;8
+ld a,[$ff00+$42]	;12
+inc a	;4
+ld [$ff00+$42],a	;12
+jr z,$05	;12/8
+bit 2,b	;8
+ld a,[$ff00+$42]	;12
+dec a	;4
+ld [$ff00+$42],a	;12
+jr z,$05	;12/8
+bit 1,b	;8
+ld a,[$ff00+$43]	;12
+dec a	;4
+ld [$ff00+$43],a	;12
+jr z,$05	;12/8
+bit 0,b	;8
+ld a,[$ff00+$43]	;12
+inc a	;4
+ld [$ff00+$43],a	;12
+jr z,$05	;12/8
+jr $CA	;12
